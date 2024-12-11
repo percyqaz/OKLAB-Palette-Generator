@@ -1,4 +1,15 @@
-const imageSelect = document.getElementById('image_select');
+const optionDivs = document.querySelectorAll('.options');
+optionDivs.forEach(div => {
+    const slider = div.querySelector('input[type="range"]');
+    const label = div.querySelector('label');
+    const original_value = label.textContent;
+    slider.addEventListener('input', function() {
+        label.textContent = original_value.replace("{}", slider.value);
+    });
+    label.textContent = original_value.replace("{}", slider.value);
+});
+
+const imageSelect = document.getElementById("image_select");
 const imageInput = document.getElementById("image_input");
 const imageOutput = document.getElementById("image_output");
 
@@ -10,9 +21,7 @@ var hueC = document.getElementById("hueC");
 var chromaI = document.getElementById("chromaI");
 var chromaC = document.getElementById("chromaC");
 var power = document.getElementById("power");
-var numColorsOP = document.getElementById("numColorsOP");
 var p1 = document.getElementById("p1");
-var palName = document.getElementById("palName");
 var bayer4x4 = [
     [  0, 8,  2, 10 ],
     [ 12,  4, 14, 6 ],
@@ -27,10 +36,6 @@ function componentToHex(c) {
   
 function rgbToHex(c) {
     return componentToHex(c[0]) + "" + componentToHex(c[1]) + "" + componentToHex(c[2]);
-}
-
-numColors.oninput = function() {
-    numColorsOP.innerHTML = "Number of Colors:" + this.value 
 }
 
 function lerp( a, b, alpha ) {

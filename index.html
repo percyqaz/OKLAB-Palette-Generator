@@ -1,21 +1,48 @@
 <link href="./style.css" rel="stylesheet" type="text/css" media="all">
 
-<div class="header">
-    <h1 class="wavy">Color Palette Generator</h1>
+<div>
+    <h1>Color Palette Generator</h1>
     <p>Powered by OKLAB</p>
 </div>
 
-<div class="options"><p id="numColorsOP">Number of Colors: 8</p><input type="range" min="4" max="16" value="8" step="2" class="slider" id="numColors"></div>
-<div class="options"><p>Light start</p><input type="range" min="1" max="100" value="30" step="1" class="slider" id="lightI"></div>
-<div class="options"><p>Light spread</p><input type="range" min="1" max="100" value="50" step="1" class="slider" id="lightC"></div>
-<div class="options"><p>Hue start</p><input type="range" min="1" max="100" value="50" step="1" class="slider" id="hueI"></div>
-<div class="options"><p>Hue spread</p><input type="range" min="1" max="100" value="50" step="1" class="slider" id="hueC"></div>
-<div class="options"><p>Chroma start</p><input type="range" min="1" max="100" value="50" step="1" class="slider" id="chromaI"></div>
-<div class="options"><p>Chroma spread</p><input type="range" min="1" max="100" value="20" step="1" class="slider" id="chromaC"></div>
-<div class="options"><p>Gradient power</p><input type="range" min="1" max="100" value="15" step="1" class="slider" id="power"></div>
-<input type="file" id="image_select" accept="image/*">
-<button onclick="generatePalette()">Generate Palette</button>
-<p id="palName"></p>
+<div class="sticky-header">
+    <div class="options">
+        <label for="numColors">Palette size: {}</label>
+        <input type="range" min="4" max="16" value="8" step="2" class="slider" id="numColors">
+    </div>
+    <div class="options">
+        <label for="lightI">Light start: {}%</label>
+        <input type="range" min="1" max="100" value="30" step="1" class="slider" id="lightI">
+    </div>
+    <div class="options">
+        <label for="lightC">Light end: {}%</label>
+        <input type="range" min="1" max="100" value="50" step="1" class="slider" id="lightC">
+    </div>
+    <div class="options">
+        <label for="hueI">Hue start: {}%</label>
+        <input type="range" min="1" max="100" value="50" step="1" class="slider" id="hueI">
+    </div>
+    <div class="options">
+        <label for="hueC">Hue change: {}%</label>
+        <input type="range" min="1" max="100" value="50" step="1" class="slider" id="hueC">
+    </div>
+    <div class="options">
+        <label for="chromaI">Chroma start: {}%</label>
+        <input type="range" min="1" max="100" value="50" step="1" class="slider" id="chromaI">
+    </div>
+    <div class="options">
+        <label for="chromaC">Chroma end: {}%</label>
+        <input type="range" min="1" max="100" value="20" step="1" class="slider" id="chromaC">
+    </div>
+    <div class="options">
+        <label for="chromaI">Darkness: {}%</label>
+        <input type="range" min="1" max="100" value="15" step="1" class="slider" id="power">
+    </div>
+    <div>
+        <input type="file" id="image_select" accept="image/*">
+        <button onclick="generatePalette()">Generate!</button>
+    </div>
+</div>
 <div id="p1"></div>
 <p id="val"></p>
 <canvas id="image_input" style="display:none;"></canvas>

@@ -1,32 +1,55 @@
-.header > *{
+.title > *{
     margin:0;
 }
 
-.options{
+.sticky-header{
+    position: sticky;
     display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    width: 100%;
+    top: 0;
+    padding: 10px 16px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #202020;
+}
+
+input[type="file"] {
+    width: 200px;
+}
+
+button {
+    display: block;
+    margin-top: 10px;
+}
+
+.options{
+    align-items: center;
+	width: 9em;
+}
+
+.options > input {
+	width: 100%;
+}
+
+.options > label {
+	font-size: 1rem;
+    text-align: center;
 }
 
 .color{
     width:inherit;
     text-align: center;
-    height: 200px;
+    height: 40px;
 }
 
 #p1{
     width: 1024;
     display: flex;
+    margin: auto;
 }
 
-#sampleimg{
-    width: 512px;
-    padding: 0;
-    margin: 0;
-}
 canvas{
     padding: 0;
     margin: 0;
-}
-
-#imageWrap{
-    display: flex;
 }
