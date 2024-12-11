@@ -1,7 +1,7 @@
 # OKLAB Palette Generator
- 
-A little experiment to play with CSS OKLAB and OKLCH integration. Will come in handy for future projects if I need a cool palette!
 
+Adapted from [abrookst's OKLAB Palette Generator](https://abrookst.github.io/OKLAB-Palette-Generator/)
 
-Check it out here:
-[https://abrookst.github.io/OKLAB-Palette-Generator/](https://abrookst.github.io/OKLAB-Palette-Generator/)
+How to use (requires python3):
+- Clone or [download](https://github.com/percyqaz/OKLAB-Palette-Generator/archive/refs/heads/main.zip) this repo
+- Navigate to the folder, run `python -m http.server`
